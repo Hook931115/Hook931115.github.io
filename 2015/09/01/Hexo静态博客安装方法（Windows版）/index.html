@@ -242,38 +242,23 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p>###先说一些废话</p>
+      		<h3>先说一些废话</h3>
+
 <hr>
 <p><code>Hexo</code>基于<code>Node.js</code>，由台湾大神<a href="http://twitter.com/tommy351" target="_blank" rel="external"><code>tommy351</code></a>开发，可以实现一个静态网页组成的博客，而且更轻更快，使用也相当的简单。只要安装了<code>Git</code>和<code>Node.js</code>，我们就可以在电脑上快速的用Hexo来写作，Hexo同样支持评论、分类、标签、图片等。</p>
-<h2 id="###特性">###特性</h2><ul>
+<h2 id="特性"><h3>特性</h3></h2><ul>
 <li>快速<br><code>Hexo</code>基于<code>Node.js</code>，支持多线程，几百篇文章也可以几秒生成。</li>
 <li>流畅<br>支持<code>GitHub</code> <code>Flavored</code> <code>Markdown</code>和<a href="octopress.org"><code>Octopress</code></a>的插件。</li>
 <li>扩展<br><code>Hexo</code>支持<code>EJS</code>、<code>Swig</code>和<code>Stylus</code>，通过插件支持<code>Haml</code>、<code>Jade</code>、<code>Less</code></li>
 </ul>
 <p><br><br>下面就来给大家介绍下<code>Hexo</code>静态博客环境搭建的方法。</p>
-<h2 id="###Hexo安装方法">###Hexo安装方法</h2><p>####一、下载Git</p>
+<h2 id="Hexo安装方法"><h3>Hexo安装方法</h3></h2><p></p><h4>一、下载Git<h4><p></p>
 <p><a href="http://git-for-windows.github.io" target="_blank" rel="external">msysGit下载地址</a></p>
 <p>进入上面的页面,点击<code>Download</code>会进入下载页面，找到<code>Downloads</code>部分，根据自己系统的情况选择下载32位或者64位的安装包，下载完成后进行安装。</p>
-<p>####二、下在Node.js<br><a href="http://nodejs.org" target="_blank" rel="external">Node.js下载地址</a><br>同样进入上面的界面，点击<code>INSTALL</code>下载安装包，下载完成后并安装。</p>
-<p>####三、安装Hexo<br>完成上面两步后，此时当我们在桌面点击鼠标右键时，会有一系列新的选项，这里我们需要用到的<code>Git Bash</code>，接下来我们会用命令行来完成剩余的工作。</p>
-<p>#####1.安装Hexo<br>根据上面的方法，打开<code>Git Bash</code>控制台，之后系统会打开一个窗口，窗口内是黑色的背景和一堆英文，看不懂没有关系跟着步骤一步一步做就行。</p>
-<p>在控制台中输入以下命令：</p>
-<p><code>npm install -g hexo</code></p>
-<p>之后系统会自动去<code>Git</code>上下载并安装<code>Hexo</code>，接下来会一直循环显示/-\这三个符号，这表示系统在下载需要的文件。</p>
-<p>但是根据笔者遇到的情况，使用<code>npm</code>安装可能会出现卡住的现象导致无法正常安装，解决的办法就是修改<code>npm</code>的安装源，大家可以选择以下方法中的一个即可（正常下载的朋友就略过这里）</p>
-<ol>
-<li><p>通过config命令：</p>
-<p> <code>npm config set registry http://registry.cnpmjs.org</code></p>
-<p> <code>npm info underscore</code></p>
-</li>
-<li><p>通过命令行指定</p>
-<p> <code>npm -registry http://registry.cnpmjs.org info underscore</code></p>
-</li>
-</ol>
-<p>然后再来执行一次最开始的命令：</p>
-<p><code>npm install -g hexo</code></p>
-<p>耐心等待一会儿，<code>Hexo</code>就下载好了。</p>
-<p>#####2.生成Hexo静态博客</p>
+<p></p><h4>二、下在Node.js</h4><br><a href="http://nodejs.org" target="_blank" rel="external">Node.js下载地址</a><br>同样进入上面的界面，点击<code>INSTALL</code>下载安装包，下载完成后并安装。<p></p>
+<p></p><h4>三、安装Hexo</h4><br>完成上面两步后，此时当我们在桌面点击鼠标右键时，会有一系列新的选项，这里我们需要用到的<code>Git Bash</code>，接下来我们会用命令行来完成剩余的工作。<p></p>
+<h5>1.安装Hexo</h5><br>根据上面的方法，打开<code>Git Bash</code>控制台，之后系统会打开一个窗口，窗口内是黑色的背景和一堆英文，看不懂没有关系跟着步骤一步一步做就行。<br><br>在控制台中输入以下命令：<br><br><code>npm install -g hexo</code><br><br>之后系统会自动去<code>Git</code>上下载并安装<code>Hexo</code>，接下来会一直循环显示/-\这三个符号，这表示系统在下载需要的文件。<br><br>但是根据笔者遇到的情况，使用<code>npm</code>安装可能会出现卡住的现象导致无法正常安装，解决的办法就是修改<code>npm</code>的安装源，大家可以选择以下方法中的一个即可（正常下载的朋友就略过这里）<br><br>1. 通过config命令：<br><br>    <code>npm config set registry http://registry.cnpmjs.org</code><br><br>    <code>npm info underscore</code><br>2. 通过命令行指定<br><br>    <code>npm -registry http://registry.cnpmjs.org info underscore</code><br><br>然后再来执行一次最开始的命令：<br><br><code>npm install -g hexo</code><br><br>耐心等待一会儿，<code>Hexo</code>就下载好了。<br><br><h5>2.生成Hexo静态博客</h5>
+
 <ol>
 <li><p>选一个适合的地方存放博客文件</p>
 <p> <code>cd</code>命令可以在命令行中快速指定到一个地址，比如：</p>
@@ -315,8 +300,8 @@
 <p>进入到blog的地址后，执行如下的命令：</p>
 <p><code>hexo generate</code> 用来生成静态网页相关的文件，这些文件会存储在<code>public</code>中，也可使用简单的命令<code>hexo g</code></p>
 <p>然后再输入<code>hexo server</code>或者<code>hexo s</code>这样可以在本地查看自己生成的网页，现在打开浏览器（推荐使用的浏览器是<code>Chrome</code>和<code>FireFox</code>）,在地址栏输入<code>localhost:4000</code>或者点击<a href="http://localhost:4000" target="_blank" rel="external">这里</a></p>
-<h2 id="###最后">###最后</h2><p>最初始的工作就做完了，下一步的任务就是如何吧网页托管到<code>GitHub</code>上，这样别人也能开你的博客了。</p>
-
+<h2 id="最后"><h3>最后</h3></h2><p>最初始的工作就做完了，下一步的任务就是如何吧网页托管到<code>GitHub</code>上，这样别人也能开你的博客了。</p>
+</h4></h4>
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
