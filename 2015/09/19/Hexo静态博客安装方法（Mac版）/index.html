@@ -257,7 +257,21 @@
 <p>打开终端，输入下面代码：  </p>
 <pre><code>ruby <span class="operator">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)</span>"</span>  
 </code></pre><p>稍等片刻安装完成就可以了，因为正在下载，如果没有网速的话，可以关闭或者按下‘Ctrk+C’来结束进程并重新下载。值得注意的是输入这行代码也可能会提醒你输入的过旧，需要输入新的代码，只用复制那段代码然后轻敲回车就OK。  </p>
-<h3> 2.安装nodejs</h3><br>用homebrew安装，一句话搞定。<br><br>    brew install node<br><br><h3> 3.安装hexo</h3><br>可以使用nodejs自带的<code>npm</code>进行安装。<br><br>    npm install -g hexo<br><br><h3> 3.1创建hexo文件夹</h3><br>待安装完成之后，在自己想要的位置新建一个文件夹，例如在根目录新建。打开终端输入：<br><br>    mkdir blog<br>    cd blog<br>    hexo init<br><br><h3> 3.2安装依赖包  </h3>
+<h3> 2.安装nodejs</h3>
+
+<p>用homebrew安装，一句话搞定。 </p>
+<pre><code><span class="keyword">brew </span>install node  
+</code></pre><h3> 3.安装hexo</h3>
+
+<p>可以使用nodejs自带的<code>npm</code>进行安装。  </p>
+<pre><code>npm <span class="operator"><span class="keyword">install</span> -<span class="keyword">g</span> hexo</span>
+</code></pre><h3> 3.1创建hexo文件夹</h3>  
+
+<p>待安装完成之后，在自己想要的位置新建一个文件夹，例如在根目录新建。打开终端输入：  </p>
+<pre><code><span class="label">mkdir</span> <span class="keyword">blog </span> 
+<span class="label">cd</span> <span class="keyword">blog </span> 
+<span class="label">hexo</span> init
+</code></pre><h3> 3.2安装依赖包  </h3>
 
 <pre><code>npm <span class="keyword">install</span>
 </code></pre><h3> 4.安装git</h3>
