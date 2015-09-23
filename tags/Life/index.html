@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Hexo静态博客安装方法（Mac版） | Hook&#39;s Blog</title>
+  <title>Tag: Life | Hook&#39;s Blog</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -84,7 +84,7 @@
 </head>
 
 <!--
-<body class="post-template">
+<body class="home-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -221,148 +221,37 @@
 
         <!-- ============================ END Hero Image =========================== -->
       
-<section id="intro">
+
+
+<section id="services">
     <div class="container">
-        <div class="row col-md-offset-2">
-            <div class="col-md-8">
-    			<span class="post-meta">
-      <time datetime="2015-09-19T12:30:24.000Z" itemprop="datePublished">
-          2015-09-19
-      </time>
-    
-    
-    | 
-    <a href='/tags/Hexo/'>Hexo</a>,
-    
-    <a href='/tags/Mac/'>Mac</a>
-    
-    
-</span>
-                <h1>Hexo静态博客安装方法（Mac版）</h1>
-            </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="row boxes">
+                    
+                    
+                        
+                        
+                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+                            
+                              <h4 class="title"><a href="/2015/09/24/程序员的权利/">程序员的权利</a></h4>
+                            
+                            <p><time datetime="2015-09-23T16:04:01.000Z"><a href="/2015/09/24/程序员的权利/">2015-09-24</a></time></p>
+                        </div>
+                    
+                </div>
+            </div>    
         </div>
-        <div class="col-md-8 col-md-offset-2">
-      		<h1> 前言 </h1>
+    </div>
+</section> 
 
-<p><code>Hexo</code>基于<code>Node.js</code>，由台湾大神<a href="http://twitter.com/tommy351" target="_blank" rel="external"><code>tommy351</code></a>开发，可以实现一个静态网页组成的博客，而且更轻更快，使用也相当的简单。只要安装了<code>Git</code>和<code>Node.js</code>，我们就可以在电脑上快速的用Hexo来写作，Hexo同样支持评论、分类、标签、图片等。</p>
-<h2 id="特性"><h3>特性</h3></h2><ul>
-<li>快速<br><code>Hexo</code>基于<code>Node.js</code>，支持多线程，几百篇文章也可以几秒生成。</li>
-<li>流畅<br>支持<code>GitHub</code> <code>Flavored</code> <code>Markdown</code>和<a href="octopress.org"><code>Octopress</code></a>的插件。</li>
-<li>扩展<br><code>Hexo</code>支持<code>EJS</code>、<code>Swig</code>和<code>Stylus</code>，通过插件支持<code>Haml</code>、<code>Jade</code>、<code>Less</code></li>
-</ul>
-<p><br><br>下面就来给大家介绍下<code>Hexo</code>静态博客环境搭建的方法。</p>
-<hr>
-<h3> 先整理一下思路</h3><br>1.首先hexo是基于<code>nodejs</code>，所以需要安装nodejs（之前没有安装过的话）。<br>2.安装nodejs的方法很多的，因为为了简单，而且网上的很多教程也是用的homebrew安装方式，我也就用的这个。<br>3.安装<code>homebrew</code>方式很简单，因为mac自带了<code>ruby</code>，一句话就能搞定。<br>4.hexo提交部署需要git部署到github，所以需要安装git工具。<br>5.整理一下安装顺序，<strong>（homebrew-nodejs-hexo-git）</strong><br><br>—<br><br><h3> 1.安装homebrew</h3>
-
-<p>打开终端，输入下面代码：  </p>
-<pre><code>ruby <span class="operator">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)</span>"</span>  
-</code></pre><p>稍等片刻安装完成就可以了，因为正在下载，如果没有网速的话，可以关闭或者按下‘Ctrk+C’来结束进程并重新下载。值得注意的是输入这行代码也可能会提醒你输入的过旧，需要输入新的代码，只用复制那段代码然后轻敲回车就OK。  </p>
-<h3> 2.安装nodejs</h3>
-
-<p>用homebrew安装，一句话搞定。 </p>
-<pre><code><span class="keyword">brew </span>install node  
-</code></pre><h3> 3.安装hexo</h3>
-
-<p>可以使用nodejs自带的<code>npm</code>进行安装。  </p>
-<pre><code>npm <span class="operator"><span class="keyword">install</span> -<span class="keyword">g</span> hexo</span>
-</code></pre><h3> 3.1创建hexo文件夹</h3>  
-
-<p>待安装完成之后，在自己想要的位置新建一个文件夹，例如在根目录新建。打开终端输入：  </p>
-<pre><code><span class="label">mkdir</span> <span class="keyword">blog </span> 
-<span class="label">cd</span> <span class="keyword">blog </span> 
-<span class="label">hexo</span> init
-</code></pre><h3> 3.2安装依赖包  </h3>
-
-<pre><code>npm <span class="keyword">install</span>
-</code></pre><h3> 4.安装git</h3>
-
-<p>安装好之后建议注册一个<code>github</code>账号，如果没有的话。</p>
-<h3> 4.1homebrew安装</h3>
-
-<pre><code><span class="label">sudo</span> <span class="keyword">brew </span>install git
-</code></pre><h3> 4.2配置</h3>
-
-<h4> 4.2.1检查SSH key</h4>
-
-
-<pre><code><span class="built_in">cd</span> ~/.ssh
-</code></pre><h4> 4.2.2备份已有的key</h4>
-
-
-<pre><code><span class="built_in">mkdir</span> key_backup
-mv id_rsa* key_backup  
-</code></pre><h4> 4.2.3生成SSH key</h4>
-
-<pre><code>ssh-keygen -t rsa -<span class="keyword">C</span> <span class="string">"xxxx@xxxx.com"</span>   
-</code></pre><p>xxxx@xxxx为自己的github账号。</p>
-<h4> 4.2.4将SSH key添加到github</h4>
-
-<p>登录到gitHub页面，Account Settings-&gt;SSH Public Keys-&gt;Add another key将生成的key(id_rsa.pub文件）内容copy到输入框中，save。id_rsa.pub文件放在.ssh这个隐藏文件夹之下，因为当前就在这个目录，所以直接打开。  </p>
-<pre><code><span class="keyword">ls</span>  
-<span class="keyword">open</span> id_rsa.pub
-</code></pre><p>打开这个文件推荐使用<code>Sublime Text 2</code>(下同),复制里面的东西，然后到在网页上保存。</p>
-<h4>4.2.5测试连接</h4>
-
-<pre><code><span class="title">ssh</span> git<span class="variable">@github</span>.com
-</code></pre><p>如果现实连接成功，那就可以，不可以请重复以上步骤，找出错误的原因，或者把显示的错误信息代码复制到谷歌上面搜索。</p>
-<h3> 4.2.6设置个人信息</h3>
-
-<pre><code>git config --<span class="keyword">global</span> user.name <span class="string">"xxx”
-</span>git config --<span class="keyword">global</span> user.email <span class="string">"xxx@xxx.com"</span>
-</code></pre><p><strong>xxx</strong>是你自己的<code>github</code>的账号，<strong>xxx@xxx.com</strong>是注册邮箱。</p>
-<h3> 5.创建github上面的repository  </h3>
-
-<p>在自己的github主页右下角，创建一个新的<code>repositpry</code>。我的github账号是<strong><strong>，那么我就应该创建的repository名字为`</strong></strong>.github.io`.</p>
-<h3> 6.部署</h3>
-
-<p>在自己创建的<code>blog</code>下找到<code>_config.yml</code>这个文件并编辑，在最下面添加如下的语句。网址的<em>**</em>替换成自己账号即可。</p>
-<pre><code>deploy:
-  type: git
-  repository: http://github.com/<span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span>/<span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span>.github.io.git
-  branch: master
-</code></pre><p><strong>PS:</strong>三个冒号之后需要留一个空格，不然会引起错误。</p>
-<p>至此，hexo博客的搭建已经完成，接下来可以执行下面代码在本地运行,查看效果  </p>
-<pre><code><span class="keyword">cd</span> blog  
-hexo <span class="keyword">g</span>
-hexo <span class="literal">s</span>
-</code></pre><p>然后在浏览器中输入<code>localhost:4000</code>就可以看到了。<br>如果没有错误的话，可以执行</p>
-<pre><code><span class="title">hexo</span> d
-</code></pre><p>完成之后，我们的博客就完全搭建起来了。在浏览器中输入<code>****.github.io</code>就可以访问了，去看看你的成果吧！</p>
-
-            <div class="clearfix"></div>
-            <hr class="nogutter">
+<section id="statement">
+    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
+        <div class="row">
+            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
         </div>
-        <nav class="pagination" role="pagination">
-    
-    <a class="pull-left" href="/2015/09/24/程序员的权利/" style="float: left;">
-        ← 程序员的权利
-    </a>
-    
-    
-    <a class="pull-right" href="/2015/09/01/Hexo静态博客安装方法（Windows版）/">
-        Hexo静态博客安装方法（Windows版） →
-    </a>
-    
-</nav>
-
-        <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2015/09/19/Hexo静态博客安装方法（Mac版）/" data-title="Hexo静态博客安装方法（Mac版）" data-url="http://hook.org.cn/2015/09/19/Hexo静态博客安装方法（Mac版）/"></div>
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"duoshuo_name"};
-(function() {
-	var ds = document.createElement('script');
-	ds.type = 'text/javascript';ds.async = true;
-	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-	ds.charset = 'UTF-8';
-	(document.getElementsByTagName('head')[0] 
-	 || document.getElementsByTagName('body')[0]).appendChild(ds);
-})();
-</script>
-</div>
     </div>
 </section>
-
-
       
 <!-- ============================ Footer =========================== -->
 
