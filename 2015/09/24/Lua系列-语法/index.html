@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2015 | Hook&#39;s Blog</title>
+  <title>Lua系列-语法 | Hook&#39;s Blog</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -84,7 +84,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -221,76 +221,110 @@
 
         <!-- ============================ END Hero Image =========================== -->
       
-
-
-<section id="services">
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2015/09/24/Lua系列-语法/">Lua系列-语法</a></h4>
-                            
-                            <p><time datetime="2015-09-24T02:25:15.000Z"><a href="/2015/09/24/Lua系列-语法/">2015-09-24</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2015/09/24/Lua系列-简介/">Lua系列-简介</a></h4>
-                            
-                            <p><time datetime="2015-09-24T01:54:06.000Z"><a href="/2015/09/24/Lua系列-简介/">2015-09-24</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2015/09/24/程序员的权利/">程序员的权利</a></h4>
-                            
-                            <p><time datetime="2015-09-23T16:04:01.000Z"><a href="/2015/09/24/程序员的权利/">2015-09-24</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2015/09/19/Hexo静态博客安装方法（Mac版）/">Hexo静态博客安装方法（Mac版）</a></h4>
-                            
-                            <p><time datetime="2015-09-19T12:30:24.000Z"><a href="/2015/09/19/Hexo静态博客安装方法（Mac版）/">2015-09-19</a></time></p>
-                        </div>
-                    
-                        
-                            </div><div class="row boxes">
-                            
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2015/09/01/Hexo静态博客安装方法（Windows版）/">Hexo静态博客安装方法（Windows版）</a></h4>
-                            
-                            <p><time datetime="2015-09-01T07:50:44.000Z"><a href="/2015/09/01/Hexo静态博客安装方法（Windows版）/">2015-09-01</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2015-09-24T02:25:15.000Z" itemprop="datePublished">
+          2015-09-24
+      </time>
+    
+    
+    | 
+    <a href='/tags/Lua/'>Lua</a>
+    
+    
+</span>
+                <h1>Lua系列-语法</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<p>###命名规范</p>
+<hr>
+<p>Lua中的命名规范基本上和C语言是一样的。</p>
+<p>Lua中的标示符可以由任意的字母组合、数字和下划线构成，但不能以数字开头，并且避免下划线开头和后面是几个大写字母的命名方式，下面是几个正确的命名方式：</p>
+<pre><code><span class="tag">i</span> j <span class="tag">var</span> abcdefg ab_cd1234
+</code></pre><p>不要使用Lua中的关键字，Lua中的关键字很少，只有21个，命名变量时，不能说使用相同的名称：</p>
+<pre><code><span class="keyword">and</span>      <span class="keyword">break</span>     <span class="keyword">do</span>     <span class="keyword">else</span>        <span class="keyword">elseif</span>
+<span class="keyword">end</span>      <span class="keyword">false</span>     <span class="keyword">for</span>    funciton    <span class="keyword">if</span>
+<span class="keyword">in</span>       <span class="keyword">local</span>     <span class="keyword">nil</span>    <span class="keyword">not</span>         <span class="keyword">or</span>
+<span class="keyword">repeat</span>   <span class="keyword">return</span>    <span class="keyword">then</span>   <span class="keyword">true</span>        <span class="keyword">until</span>
+<span class="keyword">while</span>
+</code></pre><p>Lua对大小写敏感，大写和小写是两个不同的单词</p>
+<h3 id="类型和值">类型和值</h3><hr>
+<p>Lua是一种动态类型的语言，在语言中没有类型定义的语法，每个值本身都包含了类型信息，对于变量来说，他的值的类型是可以随意变换的。Lua中又8种基础类型：</p>
+<ul>
+<li>nil：空</li>
+<li>boolean：布尔</li>
+<li>number：数字</li>
+<li>string：字符串</li>
+<li>funciton：函数</li>
+<li>table：表</li>
+<li>userdata：自定义的数据类型</li>
+<li>thread：线程</li>
+</ul>
+<p>函数<code>type</code>可以根据传入的参数返回该参数的类型名称。</p>
+<pre><code><span class="built_in">print</span>(<span class="keyword">type</span>(<span class="keyword">var</span>))
+<span class="keyword">var</span> = <span class="number">20</span> 
+<span class="built_in">print</span>(<span class="keyword">type</span>(<span class="keyword">var</span>))
+<span class="keyword">var</span> = <span class="string">"hello world"</span>
+<span class="built_in">print</span>(<span class="keyword">type</span>(<span class="keyword">var</span>))
+<span class="keyword">var</span> = <span class="built_in">print</span>
+<span class="built_in">print</span>(<span class="keyword">type</span>(<span class="keyword">var</span>))
+<span class="keyword">var</span> = {}
+<span class="built_in">print</span>(<span class="keyword">type</span>(<span class="keyword">var</span>))
+</code></pre><h4 id="nil">nil</h4><p>在Lua中nil表示的是一种类型，它只包含一个值nil。在变量未赋值之前都是nil，Lua中nil主要用于表示变量没有赋值，用来区分其他变量，当一个全局变量为nil时表示删除这个变量。</p>
+<h4 id="boolean">boolean</h4><p>boolean有两个值：true 和 false。和C++中bool是一样的。在lua中只有false和nil表示假，其他都表示真。（特别注意数字 <code>0</code>）</p>
+<pre><code><span class="keyword">var</span> = <span class="constant">nil</span>
+<span class="keyword">if</span> <span class="keyword">var</span> then
+    <span class="built_in">print</span>(<span class="string">"var is true"</span>)
+<span class="keyword">else</span>
+    <span class="built_in">print</span>(<span class="string">"var is false"</span>)
+end
+</code></pre><ul>
+<li>当var没有被赋值时，输出为var is false</li>
+<li>当var赋值为false时，输出为var is false</li>
+<li>当var赋值为true时，输出为var is true</li>
+<li>当var赋值为0时，输出为var is true（不要和C/C++弄混了）</li>
+<li>当var被赋值为“”时，输出为var is true</li>
+</ul>
+<h4 id="number">number</h4><p>在lua中number表示实数。不管是浮点数还是整型数字都是number类型。有人可能会担心浮点数的效率，其实现在的CPU大部分都有单独的浮点数计算协处理器，对于浮点数的计算完全不是问题。如果真的担心的话可以在编译lua时将number类型的类型改变成自己需要的类型（luaconf.h）。lua中的number既可以使用普通的写法，也可以使用科学计数法。</p>
+<pre><code>a = <span class="number">10</span>; b = <span class="number">50.2</span>; c = <span class="number">5e20</span>
+</code></pre><h4 id="string">string</h4><p>lua中的字符串表示的是一个字符序列，里面可以包含任何的字符，包括数字0（C/C++中字符串的终止字符）。并且Lua中字符串的长度是不限制的，你皆可以时空字符串也可以时整整一本书，lua对字符串的处理时很卡的，一般定义一个字符串是这样的</p>
+<pre><code>str = <span class="comment">"I'm a stirng"</span>
+</code></pre><p>未完待续…</p>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2015/09/24/Lua系列-简介/">
+        Lua系列-简介 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2015/09/24/Lua系列-语法/" data-title="Lua系列-语法" data-url="http://hook.org.cn/2015/09/24/Lua系列-语法/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"duoshuo_name"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 

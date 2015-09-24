@@ -272,11 +272,40 @@
 <h4 id="Adobe_Photoshop_Lightroom">Adobe Photoshop Lightroom</h4><p>Lightroom是Adobe公司的一款摄影后期制作软件，最开始的版本由Shadowland代码编写，后期版本部分使用Lua实现，Lua代码占到代码总量的63%。</p>
 <h4 id="魔兽世界">魔兽世界</h4><p>官方和玩家扩展了相当多了插件，这些都是Lua编写的</p>
 <h4 id="仙剑五">仙剑五</h4><p>游戏脚本全是Lua编写的，可以去游戏目录看看看。</p>
+<h3 id="Windows下环境搭建">Windows下环境搭建</h3><hr>
+<p>学习Lua第一要做的事情就是搭建开发环境和下载开发工具，这里我要讲述的就是如何在Windows环境中运行Lua脚本，这里我们要遇到的工具叫做LuaForWindows。</p>
+<p>Google Code中的下载地址<a href="http://code.google.com/p/luaforwindows/" target="_blank" rel="external">http://code.google.com/p/luaforwindows/</a><br>直接下载地址：<a href="http://luaforwindows.googlecode.com/files/LuaFowWindows_v5.1.4-45.exe" target="_blank" rel="external">http://luaforwindows.googlecode.com/files/LuaFowWindows_v5.1.4-45.exe</a></p>
+<h4 id="安装">安装</h4><p>在开发工具包<code>LuaForWindows_5.1.4-45.exe</code>文件双击安装，安装过程中暂时没发现有有什么需要注意的地方，安装通常软件安装的方式即可。</p>
+<p>安装好以后，会在桌面上增加两个快捷图标（Lua、SciTE）,以及在快速启动栏显示。</p>
+<h4 id="使用">使用</h4><h5 id="方法1">方法1</h5><hr>
+<p>双击我们刚刚才安装的Lua桌面的图标，出现类型Windows命令窗口。</p>
+<p>输入代码：</p>
+<pre><code><span class="function"><span class="title">print</span><span class="params">(<span class="string">"Hello World!"</span>)</span></span>
+</code></pre><p>按下<code>Enter</code>执行就能够开到效果了。</p>
+<p>Lua中除了<code>print</code>方法可以输出意外还有一个：</p>
+<pre><code>io.<span class="function"><span class="title">wirte</span><span class="params">(<span class="string">"Hello World!"</span>)</span></span>
+</code></pre><p>这同样能实现输出效果，和<code>print</code>的区别是一个光标换行一个不换行。</p>
+<h5 id="方法2">方法2</h5><hr>
+<p>打开刚刚才安装的<code>SciTE</code>。</p>
+<p>输入</p>
+<pre><code><span class="function"><span class="title">print</span><span class="params">(<span class="string">"Hello World!"</span>)</span></span>
+</code></pre><p>点击<code>Run Program</code>执行（就是菜单上那个类似播放的按钮）。</p>
+<h5 id="方式3">方式3</h5><hr>
+<p>将<code>print(&quot;Hello World!&quot;)</code>内容写入到TXT文件中，然后另存为<code>.lua</code>文件，然后运行<code>1Executor</code>,打开刚刚保存的<code>lua</code>文件。</p>
+<p>但这个方式并不是很好，我建议使用<code>SciTE</code>来打开<code>lua</code>文件。在<code>SciTe</code>菜单中点击open按钮lua，然后执行就可以了</p>
+<h5 id="方法4">方法4</h5><hr>
+<p>直接在<code>SciTE</code>中使用<code>dofile(&quot;***.lua&quot;)</code>语句来调用指定的文件并执行。</p>
+<h5 id="方法5">方法5</h5><hr>
+<p>可以去官网在线测试Lua的网址：<a href="http://www.lua.org/cgi-bin/demo" target="_blank" rel="external">http://www.lua.org/cgi-bin/demo</a></p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2015/09/24/Lua系列-语法/" style="float: left;">
+        ← Lua系列-语法
+    </a>
     
     
     <a class="pull-right" href="/2015/09/24/程序员的权利/">
