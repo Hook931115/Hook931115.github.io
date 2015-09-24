@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2015 | Hook&#39;s Blog</title>
+  <title>Lua系列-语法2 | Hook&#39;s Blog</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -84,7 +84,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -221,85 +221,132 @@
 
         <!-- ============================ END Hero Image =========================== -->
       
-
-
-<section id="services">
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2015/09/24/Lua系列-语法2/">Lua系列-语法2</a></h4>
-                            
-                            <p><time datetime="2015-09-24T07:48:31.000Z"><a href="/2015/09/24/Lua系列-语法2/">2015-09-24</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2015/09/24/Lua系列-简介/"></a></h4>
-                            
-                            <p><time datetime="2015-09-24T06:48:15.000Z"><a href="/2015/09/24/Lua系列-简介/">2015-09-24</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2015/09/24/Lua系列-语法/">Lua系列-语法</a></h4>
-                            
-                            <p><time datetime="2015-09-24T02:25:15.000Z"><a href="/2015/09/24/Lua系列-语法/">2015-09-24</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2015/09/24/程序员的权利/">程序员的权利</a></h4>
-                            
-                            <p><time datetime="2015-09-23T16:04:01.000Z"><a href="/2015/09/24/程序员的权利/">2015-09-24</a></time></p>
-                        </div>
-                    
-                        
-                            </div><div class="row boxes">
-                            
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2015/09/19/Hexo静态博客安装方法（Mac版）/">Hexo静态博客安装方法（Mac版）</a></h4>
-                            
-                            <p><time datetime="2015-09-19T12:30:24.000Z"><a href="/2015/09/19/Hexo静态博客安装方法（Mac版）/">2015-09-19</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2015/09/01/Hexo静态博客安装方法（Windows版）/">Hexo静态博客安装方法（Windows版）</a></h4>
-                            
-                            <p><time datetime="2015-09-01T07:50:44.000Z"><a href="/2015/09/01/Hexo静态博客安装方法（Windows版）/">2015-09-01</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2015-09-24T07:48:31.000Z" itemprop="datePublished">
+          2015-09-24
+      </time>
+    
+    
+    | 
+    <a href='/tags/Lua/'>Lua</a>
+    
+    
+</span>
+                <h1>Lua系列-语法2</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="1-表达式">1.表达式</h3><h4 id="1-1_算数运算符">1.1 算数运算符</h4><ul>
+<li><code>+</code> 加</li>
+<li><code>-</code> 减</li>
+<li><code>*</code> 乘</li>
+<li><code>/</code> 除</li>
+<li><code>^</code> 指数</li>
+<li><code>%</code> 取余</li>
+<li><code>-</code> 负号</li>
+</ul>
+<p>下面是一些简单的例子：</p>
+<pre><code><span class="tag">a</span> = <span class="number">3</span>
+<span class="tag">b</span> = <span class="number">5</span>
+<span class="function"><span class="title">print</span><span class="params">(a + b)</span></span>  -- <span class="number">8</span>
+<span class="function"><span class="title">print</span><span class="params">(a - b)</span></span>  -- -<span class="number">2</span>
+<span class="function"><span class="title">print</span><span class="params">(a * b)</span></span>  -- <span class="number">15</span>
+<span class="function"><span class="title">print</span><span class="params">(a / b)</span></span>  -- <span class="number">0.6</span>
+<span class="function"><span class="title">print</span><span class="params">(a ^ b)</span></span>  -- <span class="number">243</span>
+<span class="function"><span class="title">print</span><span class="params">(a % b)</span></span>  -- <span class="number">3</span>
+<span class="function"><span class="title">print</span><span class="params">(-a)</span></span> -- -<span class="number">3</span>
+</code></pre><h4 id="1-2_关系运算符">1.2 关系运算符</h4><ul>
+<li><code>&lt;</code>：小于</li>
+<li><code>&gt;</code>：大于</li>
+<li><code>&lt;=</code>：小于等于</li>
+<li><code>&gt;=</code>：大于等于</li>
+<li><code>~=</code>：不等于</li>
+<li><code>==</code>：等于</li>
+</ul>
+<p>table、userdata和function,Lua中是以他们的引用来作比较。也就意味着只有当他们指向同一个对象时才是相等的。</p>
+<h4 id="1-3_逻辑运算符">1.3 逻辑运算符</h4><ul>
+<li>and：与</li>
+<li>or：或</li>
+<li>not：非</li>
+</ul>
+<p>对于<code>and</code>来说，当第一个操作数为假时，返回第一个操作数，否则返回第二个操作数。</p>
+<p>对于<code>or</code>来说，当第一个操作数为真时，返回第一个操作数，否则返回第二个操作数。</p>
+<p>这样使用会带来一些语法上的便利。比如我们在代码中有时候会需要判断一个值是不是为空，为空的话给他赋值，常规的写法是这样的：</p>
+<pre><code><span class="keyword">if</span> <span class="keyword">not</span> x <span class="keyword">then</span> x = v <span class="keyword">end</span>
+</code></pre><p>我们可以写成这样：</p>
+<pre><code>x = x <span class="keyword">or</span> v
+</code></pre><p>还有一种用法时类似于C语言中的条件表达式，比如我们要找出两个数中的最大值：</p>
+<pre><code><span class="built_in">max</span> = <span class="params">(<span class="params">(a)</span> &gt; <span class="params">(b)</span>)</span> ? a : b
+</code></pre><p>在Lua中我们可以这样写：</p>
+<pre><code><span class="built_in">max</span> = (<span class="operator">a</span> &gt; b) <span class="operator">and</span> <span class="operator">a</span> <span class="operator">or</span> b
+</code></pre><h4 id="1-4_字符串连接操作符">1.4 字符串连接操作符</h4><ul>
+<li><code>..</code> 字符串连接操作符</li>
+</ul>
+<p>字符串连接用来连接两个字符串，当后一个为其他类型时会转为字符串，比如：</p>
+<pre><code><span class="function"><span class="title">print</span><span class="params">(<span class="string">"Hello"</span>..<span class="number">2</span>)</span></span>
+</code></pre><h4 id="1-5_操作符优先级">1.5 操作符优先级</h4><pre><code>|<span class="string">^</span>|
+||
+|<span class="string">not # -</span>|
+|<span class="string">* / %</span>|
+|<span class="string">+ -</span>|
+|<span class="string">..</span>|
+|<span class="string">&lt; &gt; &lt;= &gt;= ~= ==</span>|
+|<span class="string">and</span>|
+|<span class="string">or</span>|
+</code></pre><p>除了指数操作符和连接操作符是右结合外，其他的操作符都是左结合。</p>
+<p>优先级不用死记硬背，因为我们还有()。</p>
+<h4 id="1-6_table构造式">1.6 table构造式</h4><p>构造式是用来创建和初始化table的表达式，是Lua中特有的一种表达式。最简单的构造式是这样的：</p>
+<pre><code>t = {}<span class="comment">;</span>
+</code></pre><p>构造式还可以初始化一个记录风格的table：</p>
+<pre><code>a = {x = <span class="number">10</span>,y = <span class="number">20</span>}
+</code></pre><p>在构造一个Lua的table的时候，如果我们不给它一个key，那么默认的key就是从1，2，3，4开始的，比如我们要申请一个有关星期的table：</p>
+<pre><code>t = {<span class="string">"Sunday"</span>,<span class="string">"Monday"</span>,<span class="string">"Tuesday"</span>,<span class="string">"Wednesday,"</span>Thursday<span class="string">","</span>Friday<span class="string">","</span>Saturday<span class="string">"}</span>
+</code></pre><p>这样的一个table它的构造应该时这样的：</p>
+<pre><code><span class="atom">t</span> = {}
+<span class="atom">t</span>[<span class="number">1</span>] = <span class="string">"Sunday"</span>
+<span class="atom">t</span>[<span class="number">2</span>] = <span class="string">"Monday"</span>
+...
+</code></pre><p>这段代码看起来是不是很眼熟？是的，它其实就是我们以前使用过的数组。如果你在一个table中既想使用数组也想使用map，我们也可以这样来构造一个table：</p>
+<pre><code><span class="title">t</span> = {
+    <span class="title">name</span> = <span class="string">""</span>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
+}
+</code></pre><p> 未完待续…</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2015/09/24/Lua系列-简介/">
+         →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2015/09/24/Lua系列-语法2/" data-title="Lua系列-语法2" data-url="http://hook.org.cn/2015/09/24/Lua系列-语法2/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"duoshuo_name"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
