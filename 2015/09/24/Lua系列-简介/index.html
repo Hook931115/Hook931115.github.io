@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2015/9 | Hook&#39;s Blog</title>
+  <title>Lua系列-简介 | Hook&#39;s Blog</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -84,7 +84,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -221,64 +221,88 @@
 
         <!-- ============================ END Hero Image =========================== -->
       
-
-
-<section id="services">
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2015/09/24/Lua系列-简介/">Lua系列-简介</a></h4>
-                            
-                            <p><time datetime="2015-09-24T01:54:06.000Z"><a href="/2015/09/24/Lua系列-简介/">2015-09-24</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2015/09/24/程序员的权利/">程序员的权利</a></h4>
-                            
-                            <p><time datetime="2015-09-23T16:04:01.000Z"><a href="/2015/09/24/程序员的权利/">2015-09-24</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2015/09/19/Hexo静态博客安装方法（Mac版）/">Hexo静态博客安装方法（Mac版）</a></h4>
-                            
-                            <p><time datetime="2015-09-19T12:30:24.000Z"><a href="/2015/09/19/Hexo静态博客安装方法（Mac版）/">2015-09-19</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2015/09/01/Hexo静态博客安装方法（Windows版）/">Hexo静态博客安装方法（Windows版）</a></h4>
-                            
-                            <p><time datetime="2015-09-01T07:50:44.000Z"><a href="/2015/09/01/Hexo静态博客安装方法（Windows版）/">2015-09-01</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2015-09-24T01:54:06.000Z" itemprop="datePublished">
+          2015-09-24
+      </time>
+    
+    
+    | 
+    <a href='/tags/Lua/'>Lua</a>
+    
+    
+</span>
+                <h1>Lua系列-简介</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<p>Lua是一个小巧的脚本语言。是巴西里约热内卢天主教大学<code>（Pontifical Catholic University of Rio de Janeiro）</code>里的一个研究小组，由<code>Roberto Ierusalimschy</code>、<code>Waldemar Celes</code>和<code>Luiz Henrique de Figueiredo</code>所组成并于1993年开发。 </p>
+<p>Lua的设计初衷是为了能够嵌入到其他的应用程序中，能够为应用提供灵活的扩展和定制。Lua脚本和C/C++可以很容易的相互调用，这样Lua能够使用现有的大量的C/C++库，并且能够在带来的开发效率的同时，保证程序的运行效率。</p>
+<p>Lua的所有代码都是有标准的<code>ANSI C</code>编写而成，只要是支持<code>ANSI C</code>的系统上都能够完美的运行。一个完整的Lua解释器不过200k，在目前所有脚本引擎中，Lua的速度是最快的。这一切都决定了Lua是作为嵌入式脚本的最佳选择。</p>
+<h3 id="面向的用户">面向的用户</h3><hr>
+<p>Lua主要面向的三类用户：</p>
+<ul>
+<li>需要一门简单的脚本语言嵌入到应用程序中</li>
+<li>C/C++语言开发者想要提高开发效率</li>
+<li>脚本开发者想要提要运行效率</li>
+</ul>
+<h3 id="Lua的特点">Lua的特点</h3><hr>
+<ul>
+<li>可以很方便的和用C/C++编写的游戏逻辑相互调用</li>
+<li>很简单，不涉及任何复杂的游戏编程概念，麻雀虽小五脏俱全，基本的编程需要全部都能满足</li>
+<li>轻量级，库体积很小</li>
+<li>学习很容易，甚至策划都学会了编写脚本</li>
+<li>性能好，消耗的计算机资源并不多</li>
+<li>可扩展，程序可以通过tolua++将C++接口转换为Lua接口</li>
+<li>同时支持面向过程和函数式编程，当然也可以使用一些方式使其可以支持面向对象</li>
+</ul>
+<h3 id="Lua的应用场景">Lua的应用场景</h3><hr>
+<ul>
+<li>游戏开发</li>
+<li>独立应用脚本</li>
+<li>Web应用脚本</li>
+<li>扩展和数据库插件</li>
+<li>安全系统</li>
+</ul>
+<h3 id="使用过的项目">使用过的项目</h3><hr>
+<h4 id="Adobe_Photoshop_Lightroom">Adobe Photoshop Lightroom</h4><p>Lightroom是Adobe公司的一款摄影后期制作软件，最开始的版本由Shadowland代码编写，后期版本部分使用Lua实现，Lua代码占到代码总量的63%。</p>
+<h4 id="魔兽世界">魔兽世界</h4><p>官方和玩家扩展了相当多了插件，这些都是Lua编写的</p>
+<h4 id="仙剑五">仙剑五</h4><p>游戏脚本全是Lua编写的，可以去游戏目录看看看。</p>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2015/09/24/程序员的权利/">
+        程序员的权利 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2015/09/24/Lua系列-简介/" data-title="Lua系列-简介" data-url="http://hook.org.cn/2015/09/24/Lua系列-简介/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"duoshuo_name"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
